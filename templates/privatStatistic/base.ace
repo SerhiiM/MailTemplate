@@ -5,7 +5,8 @@ html lang=en
     title Your Weekly Statistics
 
     = include public/styles/all
-    
+    = include public/styles/trackers
+
   body
 
     = yield main

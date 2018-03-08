@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"html/template"
 	"net/http"
+	"strings"
 
 	"github.com/yosssi/ace"
 
@@ -13,7 +14,16 @@ import (
 func handler(w http.ResponseWriter, r *http.Request) {
 	funcMap := template.FuncMap{
 		"GetOrderNumber": func(n int) int {
-			return 4
+			incremented := n + 1
+			return incremented
+		},
+		"UppetCaseTracker": func(s string) string {
+			result := strings.ToUpper(s)
+			return result
+		},
+		"DeleteMinus": func(n float32) float32 {
+			plused := n * -1
+			return plused
 		},
 	}
 
@@ -41,26 +51,36 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	statistic := datatypes.Statistic{
-		TotalTime:           999,
-		TotalTimeComparison: 2,
+		TotalTime:           99,
+		TotalTimeComparison: -8,
 		Useful:              82,
-		UsefulComparison:    21,
+		UsefulComparison:    9,
 		MostUsed:            []string{"Adobe Photoshop", "Illustrator", "Sketch", "Pollaris Office", "Photoshop"},
 	}
 
 	teammate1 := datatypes.Teammate{
-		Name: "Tom Delonge",
-		Time: 6.4,
+		Name:   "Tom Delonge",
+		Avatar: "public/images/gentleman.svg",
+		Time:   6.4,
 	}
 
 	teammate2 := datatypes.Teammate{
-		Name: "Stive Churchill",
-		Time: 6.0,
+		Name:   "Stive Churchill",
+		Avatar: "public/images/detective.svg",
+		Time:   1,
 	}
 
 	teammate3 := datatypes.Teammate{
-		Name: "Jack White",
-		Time: 5.5,
+		Name:   "Jack White",
+		Avatar: "public/images/astronaut.svg",
+		Time:   5.5,
+	}
+
+	project2 := datatypes.Project{
+		Name:      "CodeQuality Redesign",
+		Tracker:   "Jira",
+		Time:      29,
+		Teammates: []datatypes.Teammate{teammate1, teammate2, teammate3},
 	}
 
 	project1 := datatypes.Project{
@@ -76,7 +96,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		TimeRange: timerange,
 		Domen:     domen,
 		Statistic: statistic,
-		Projects:  []datatypes.Project{project1},
+		Projects:  []datatypes.Project{project1, project2},
 	}
 
 	if err := tpl.Execute(w, info); err != nil {

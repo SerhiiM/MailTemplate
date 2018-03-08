@@ -52,7 +52,6 @@
         font-size: 13px; 
         line-height: 18px; 
         color: #1991eb; 
-        font-family: 'Trebuchet MS', Helvetica, sans-serif;
     }
 
     .domen-block--link{
@@ -72,11 +71,9 @@
         line-height: 30px; 
         color: #1991eb; 
         text-align: center; 
-        font-family: 'Trebuchet MS', Helvetica, sans-serif;
     }
     
     .center-table--title--span{
-        font-family: SFUIDisplay;
         font-size: 18px;
         color: #202b3e; 
         font-weight: bold; 
@@ -87,7 +84,6 @@
     }
 
     .user-info--name--span{
-        font-family: SFUIDisplay;
         font-size: 18px;
         font-weight: bold;
         font-style: normal;
@@ -97,7 +93,6 @@
     }
 
     .user-info--date--span{
-        font-family: SFUIDisplay;
         font-size: 12px;
         line-height: 1.75;
         color: #7f8fa4;
@@ -114,14 +109,12 @@
     }
 
     .statistic-column--title{
-        font-family: SFUIDisplay;
         font-size: 14px;
         text-align: left;
         color: #282f36;
     }
 
     .statistic-column--percent{
-        font-family: SFUIDisplay;
         font-size: 44px;
         line-height: normal;
         color: #202b3e;
@@ -172,7 +165,6 @@
     }
 
     .project-name{
-        font-family: SFUIDisplay;
         font-size: 14px;
         font-weight: 500;
         font-style: normal;
@@ -185,7 +177,7 @@
         
     .tracker-name{
         display: inline-block;
-        border-radius: 3px;
+        border-radius: 2px;
         background: lightgrey;
         padding: 0 3px;
         margin-left: 4px;
@@ -195,4 +187,54 @@
         position: relative;
         top: 2px;
         right: 3px
+    }
+
+    .timer-value{
+        font-size: 15px;
+        font-weight: 500;
+        color: #282f36;
+    }
+
+    .avatar-icon{
+        position: relative;
+        margin-right: 7px;
+    }
+
+    .teammate-name{
+        position: relative;
+        bottom: 8px;
+    }
+
+    .bottom-btn-block{
+        text-align: center;
+    }
+
+    .bottom-btn{
+        width: 163px;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 100px;
+        background-color: #1991eb;
+        padding: 8px 43px;
+        color: #ffffff;
+        text-decoration: none; 
+        font-size: 13px;
+    }
+
+    .bottom-text-block{
+        width: 330px;
+        margin: 0 auto;
+        text-align: center;
+        color: #7f8fa4;
+        font-size: 11px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.45;
+    }
+
+    .bottom-text-block a {
+        color: #7f8fa4; 
+        text-decoration: underline; 
+        margin-left: 2px;
     }

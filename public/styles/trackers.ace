@@ -1,0 +1,100 @@
+= css
+
+    .REDMINE{
+        color: #ffffff;
+        background-color: #f45045;
+    }
+
+    .ZOHO{
+        background-color: #fbbf24;
+    }
+
+    .TRELLO{
+        background-color: #007ec6;
+    }
+
+    .ODOO{
+        background-color: #a24789;
+    }
+
+    .BREEZE{
+        background-color: #5ec6ce;
+    }
+
+    .MANTIS{
+        background-color: #83C125;
+    }
+
+    .INSIGHTLY{
+        background-color: #ff4900;
+    }
+
+    .JIRA{
+        color: #ffffff;
+        background-color: #1991eb;
+    }
+
+    .GITHUB{
+        background-color: #6f676c;
+    }
+
+    .ACTIVECOLLAB{
+        background-color: #459df5;
+    }
+
+    .COLLAB{
+        background-color: #459df5;
+    }
+
+    .BASECAMP{
+        background-color: #6cc164;
+    }
+
+    .BCCLASSIC{
+        background-color: #6cc164;
+    }
+
+    .BCV2{
+        background-color: #6cc164;
+    }
+    
+    .ASANA{
+        background-color: #f95870;
+    }
+
+    .WRIKE{
+        background-color: #9AC83C;
+    }
+
+    .LIQUIDPLANNER{
+        background-color: #000000;
+    }
+
+    .TEAMWORK{
+        background-color: #3B93F7;
+    }
+
+    .GCALENDAR{
+        background-color: #4483ED;
+    }
+
+    .MICROSOFTTODO{
+        background-color: #3E86F5;
+    }
+
+    .TODOIST{
+        color: #ffffff;
+        background-color: #E44332;
+    }
+
+    .WUNDERLIST{
+        background-color: #F0452B;
+    }
+    
+    .RALLY{
+        background-color: #006488;
+    }
+
+    .TGTRACKER{
+        background-color: #c40ba5;
+    }

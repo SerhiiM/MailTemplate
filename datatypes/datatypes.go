@@ -23,8 +23,9 @@ type Statistic struct {
 }
 
 type Teammate struct {
-	Name string
-	Time float32
+	Name   string
+	Avatar string
+	Time   float32
 }
 
 type Project struct {

@@ -12,7 +12,8 @@
               table width=550 align=center cellpadding=0 cellspacing=0
                 tr
                   td.logo-block width=95
-                    img.logo-block--img src=public/images/logo.png width=95 height=23 alt= 
+                    a href={{.Domen.Address}}
+                      img.logo-block--img src=public/images/logo.png width=95 height=23 alt= 
                   td.domen-block align=right
                     a.domen-block--link href={{.Domen.Address}} {{.Domen.Title}}
                 tr 
@@ -63,16 +64,30 @@
                                         span +{{.Statistic.TotalTime}}
                                         span.statistic-column--lower.statistic-column--highlight h
                                       div.statistic-column--comment 
-                                        span.statistic-column--highlight {{.Statistic.TotalTimeComparison}}h
-                                        span  fewer than last week
+                                        {{if gt .Statistic.TotalTimeComparison 0.0}}
+                                          span.statistic-column--highlight {{.Statistic.TotalTimeComparison}}h
+                                          span  more than last week
+                                        {{else if lt .Statistic.TotalTimeComparison 0.0}}
+                                          span.statistic-column--highlight {{DeleteMinus .Statistic.TotalTimeComparison}}h
+                                          span  fewer than last week
+                                        {{else}}
+                                          span equal with last week
+                                        {{end}}
                                     td.statistic-column width=33% 
                                       div.statistic-column--title Useful activity
                                       div.statistic-column--percent 
                                         span {{.Statistic.Useful}}
                                         span.statistic-column--lower.statistic-column--highlight %
                                       div.statistic-column--comment
-                                        span.statistic-column--highlight {{.Statistic.UsefulComparison}}% 
-                                        span  more than last week
+                                        {{if gt .Statistic.UsefulComparison 0.0}}
+                                          span.statistic-column--highlight {{.Statistic.UsefulComparison}}%
+                                          span  more than last week
+                                        {{else if lt .Statistic.UsefulComparison 0.0}}
+                                          span.statistic-column--highlight {{DeleteMinus .Statistic.UsefulComparison}}%
+                                          span  fewer than last week
+                                        {{else}}
+                                          span equal with last week
+                                        {{end}}
                                     td.statistic-column
                                       div.statistic-column--title Most used apps
                                       div
@@ -91,24 +106,47 @@
                                 td colspan=2
                                   table width=100% align=center cellpadding=0 cellspacing=0
                                     tr.row-teammates
-                                      td 
-                                        span.project-name {{$i}}. {{.Name}} 
-                                        div.tracker-name {{.Tracker}}
-                                      td 
+                                      td width=350
+                                        span.project-name {{GetOrderNumber $i}}. {{.Name}} 
+                                        div.tracker-name class={{UppetCaseTracker .Tracker}} {{.Tracker}} 
+                                      td
                                         img.timer-icon src=public/images/timer.svg heigth=13 width=13 alt=
-                                        span {{.Time}} hours
+                                        span.timer-value {{.Time}} hours
                                     {{range .Teammates}}
                                       tr.row-teammates
-                                        td 
+                                        td width=350
+                                          img.avatar-icon src={{.Avatar}} heigth=24 width=24 alt=
                                           span.teammate-name {{.Name}} 
-                                        td 
+                                        td
                                           img.timer-icon src=public/images/timer.svg heigth=13 width=13 alt=
-                                          span {{.Time}} hours
+                                          {{if gt .Time 1.0}}
+                                            span.timer-value {{.Time}} hours
+                                          {{else}}
+                                            span.timer-value {{.Time}} hour
+                                          {{end}}                             
                                     {{end}} 
-                            {{end}}   
+                              tr
+                                td heigth=25 width=100% colspan=2
+                                  img src=public/images/none.gif heigth=25 width=25 alt=      
+                            {{end}} 
+
+                            tr
+                              td.bottom-btn-block heigth=50 width=100% colspan=2
+                                a.bottom-btn href={{.Domen.Address}} Learn more
+                            tr
+                              td heigth=25 width=100% colspan=2
+                                img src=public/images/none.gif heigth=25 width=25 alt=
+                            tr
+                              td width=100% colspan=2
+                                div.bottom-text-block
+                                  p
+                                    span If you do not wish to receive any emails from TimeGuard
+                                    a href={{.Domen.Address}} click here. 
+                                  p
+                                    a href={{.Domen.Address}} Privacy Policy 
                             tr
                               td heigth=50 width=100% colspan=2
-                                img src=public/images/none.gif heigth=50 width=50 alt=         
+                                img src=public/images/none.gif heigth=30 width=30 alt=         
                         td width=60
       td.columns--for-padding
 
