@@ -13,7 +13,7 @@
                 tr
                   td.logo-block width=95
                     a href={{.Domen.Address}}
-                      img.logo-block--img src=public/images/logo.png width=95 height=23 alt= 
+                      img.logo-block--img src=public/images/logo.svg width=95 height=23 alt= 
                   td.domen-block align=right
                     a.domen-block--link href={{.Domen.Address}} {{.Domen.Title}}
                 tr 

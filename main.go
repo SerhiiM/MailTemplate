@@ -46,8 +46,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	domen := datatypes.Domen{
-		Title:   "tgms.qarea.org",
-		Address: "http://tgms.qarea.org",
+		Title:   "facebook.com",
+		Address: "http://facebook.com",
 	}
 
 	statistic := datatypes.Statistic{
