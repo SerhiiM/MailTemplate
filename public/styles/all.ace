@@ -1,0 +1,198 @@
+= css
+    * {
+        padding: 0;
+        margin: 0;
+        -webkit-text-size-adjust: none;
+        -webkit-text-resize: 100%;
+        text-resize: 100%;
+    }
+
+    body {
+        font: 13px/18px 'Trebuchet MS', Helvetica, sans-serif;
+        color: #4a4a4a;
+        margin: 0;
+        padding:0;
+        background: #fff;
+    }
+
+    .table--statistic {
+        border-collapse:collapse; 
+        border:none;
+        width: 600px; 
+        margin: 0 auto;
+    }
+
+    .columns--for-padding {
+        width: 20px;
+    }
+
+    .padding-top-page{
+        height:31px; 
+        width:550px;
+        font-size: 0; 
+        line-height: 0; 
+        vertical-align: top
+    }
+
+    .logo-block{
+        font-size: 0; 
+        line-height: 0
+    }
+
+    .logo-block--img{
+        border: 0; 
+        max-width: 95px;
+        display: block; 
+        width: 95px; 
+        height: 23px;
+    }
+
+    .domen-block{
+        width: 100%;
+        font-size: 13px; 
+        line-height: 18px; 
+        color: #1991eb; 
+        font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    }
+
+    .domen-block--link{
+        color: #1991eb; 
+        text-decoration: none; 
+        font-size: 13px;
+    }
+
+    .center-table--block{
+        border-collapse:collapse; 
+        border:none; 
+        width: 430px;
+    }
+
+    .center-table--title{
+        font-size: 18px; 
+        line-height: 30px; 
+        color: #1991eb; 
+        text-align: center; 
+        font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    }
+    
+    .center-table--title--span{
+        font-family: SFUIDisplay;
+        font-size: 18px;
+        color: #202b3e; 
+        font-weight: bold; 
+        display: inline-block; 
+        line-height: 30px; 
+        border-bottom: 1px solid #1991eb; 
+        padding: 0 10px;"
+    }
+
+    .user-info--name--span{
+        font-family: SFUIDisplay;
+        font-size: 18px;
+        font-weight: bold;
+        font-style: normal;
+        line-height: normal;
+        text-align: left;
+        color: #1991eb;
+    }
+
+    .user-info--date--span{
+        font-family: SFUIDisplay;
+        font-size: 12px;
+        line-height: 1.75;
+        color: #7f8fa4;
+    }
+
+    .statistic-column{
+        border-right: solid 1px #dfe3e9;
+        padding: 0 10px;
+        vertical-align: top;
+    }
+
+    .statistic-column:last-child{
+        border-right: 0;
+    }
+
+    .statistic-column--title{
+        font-family: SFUIDisplay;
+        font-size: 14px;
+        text-align: left;
+        color: #282f36;
+    }
+
+    .statistic-column--percent{
+        font-family: SFUIDisplay;
+        font-size: 44px;
+        line-height: normal;
+        color: #202b3e;
+        padding: 5px 0;
+    }
+
+    .statistic-column--highlight{
+        color: #1991eb;
+    }
+
+    .statistic-column--lower{
+        font-size: 34px;
+    }
+
+    .statistic-column--list--items{
+        list-style-type: none;
+        margin-top: 5px;
+    }
+
+    .statistic-column--list--items--boxes{
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        margin-right: 5px;
+        border-radius: 50%;
+        background-color: #1991eb;
+    }
+
+    .statistic-column--list--items:nth-child(2) .statistic-column--list--items--boxes{
+        opacity: 0.7;
+    }
+
+    .statistic-column--list--items:nth-child(3) .statistic-column--list--items--boxes{
+        opacity: 0.5;
+    }
+
+    .statistic-column--list--items:nth-child(4) .statistic-column--list--items--boxes{
+        opacity: 0.4;
+    }
+
+    .statistic-column--list--items:nth-child(5) .statistic-column--list--items--boxes{
+        opacity: 0.2;
+    }
+
+    .row-teammates td{
+        padding: 10px 0 ;
+        border-bottom: solid 1px #dfe3e9;
+    }
+
+    .project-name{
+        font-family: SFUIDisplay;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #282f36;
+    }
+        
+    .tracker-name{
+        display: inline-block;
+        border-radius: 3px;
+        background: lightgrey;
+        padding: 0 3px;
+        margin-left: 4px;
+    }
+
+    .timer-icon{
+        position: relative;
+        top: 2px;
+        right: 3px
+    }

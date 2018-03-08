@@ -1,0 +1,11 @@
+= doctype html
+html lang=en
+  head
+    meta charset=utf-8
+    title Your Weekly Statistics
+
+    = include public/styles/all
+    
+  body
+
+    = yield main

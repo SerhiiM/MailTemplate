@@ -1,0 +1,114 @@
+= content main
+  table.table--statistic width=600 align=center cellpadding=0 cellspacing=0
+    tr
+      td.columns--for-padding
+      td 
+        table width=550 align=center cellpadding=0 cellspacing=0
+          tr
+            td.padding-top-page heigth=31 width=550
+              img src=public/images/none.gif heigth=31 width=31 alt=
+          tr
+            td
+              table width=550 align=center cellpadding=0 cellspacing=0
+                tr
+                  td.logo-block width=95
+                    img.logo-block--img src=public/images/logo.png width=95 height=23 alt= 
+                  td.domen-block align=right
+                    a.domen-block--link href={{.Domen.Address}} {{.Domen.Title}}
+                tr 
+                  td colspan=2 
+                    img src=public/images/none.gif heigth=21 width=21 alt=
+                tr 
+                  td colspan=2
+                    table width=100% align=center cellpadding=0 cellspacing=0
+                      tr
+                        td width=60
+                        td width=430
+                          table.center-table--block width=100% align=center cellpadding=0 cellspacing=0
+                            tr
+                              td.center-table--title align=center
+                                span.center-table--title--span {{.Title}}
+                        td width=60 
+                tr 
+                  td colspan=2
+                    table width=100% align=center cellpadding=0 cellspacing=0
+                      tr  
+                        td width=60
+                        td 
+                          table width=100% align=center cellpadding=0 cellspacing=0
+                            tr
+                              td heigth=50 width=100% colspan=2
+                                img src=public/images/none.gif heigth=50 width=50 alt=
+                            tr 
+                              td width=100
+                                img src=public/images/avatar.svg width=100 height=100 alt= 
+                              td 
+                                table width=100% align=center cellpadding=0 cellspacing=0
+                                  tr
+                                    td 
+                                      span.user-info--name--span {{.User.Name}}
+                                  tr
+                                    td 
+                                      span.user-info--date--span {{.TimeRange.From}} – {{.TimeRange.To}}
+                            tr
+                              td heigth=50 width=100% colspan=2
+                                img src=public/images/none.gif heigth=50 width=50 alt=
+                            tr
+                              td colspan=2
+                                table width=100% cellpadding=0 cellspacing=0
+                                  tr  
+                                    td.statistic-column width=33% 
+                                      dic.statistic-column--title Total time
+                                      div.statistic-column--percent
+                                        span +{{.Statistic.TotalTime}}
+                                        span.statistic-column--lower.statistic-column--highlight h
+                                      div.statistic-column--comment 
+                                        span.statistic-column--highlight {{.Statistic.TotalTimeComparison}}h
+                                        span  fewer than last week
+                                    td.statistic-column width=33% 
+                                      div.statistic-column--title Useful activity
+                                      div.statistic-column--percent 
+                                        span {{.Statistic.Useful}}
+                                        span.statistic-column--lower.statistic-column--highlight %
+                                      div.statistic-column--comment
+                                        span.statistic-column--highlight {{.Statistic.UsefulComparison}}% 
+                                        span  more than last week
+                                    td.statistic-column
+                                      div.statistic-column--title Most used apps
+                                      div
+                                        ul.test
+                                          {{range .Statistic.MostUsed}}
+                                            li.statistic-column--list--items
+                                              div
+                                                div.statistic-column--list--items--boxes
+                                                span {{.}}
+                                          {{end}}
+                            tr
+                              td heigth=50 width=100% colspan=2
+                                img src=public/images/none.gif heigth=50 width=50 alt=  
+                            {{range $i, $e := .Projects}}
+                              tr 
+                                td colspan=2
+                                  table width=100% align=center cellpadding=0 cellspacing=0
+                                    tr.row-teammates
+                                      td 
+                                        span.project-name {{$i}}. {{.Name}} 
+                                        div.tracker-name {{.Tracker}}
+                                      td 
+                                        img.timer-icon src=public/images/timer.svg heigth=13 width=13 alt=
+                                        span {{.Time}} hours
+                                    {{range .Teammates}}
+                                      tr.row-teammates
+                                        td 
+                                          span.teammate-name {{.Name}} 
+                                        td 
+                                          img.timer-icon src=public/images/timer.svg heigth=13 width=13 alt=
+                                          span {{.Time}} hours
+                                    {{end}} 
+                            {{end}}   
+                            tr
+                              td heigth=50 width=100% colspan=2
+                                img src=public/images/none.gif heigth=50 width=50 alt=         
+                        td width=60
+      td.columns--for-padding
+
