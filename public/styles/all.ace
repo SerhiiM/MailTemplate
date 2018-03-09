@@ -1,4 +1,14 @@
 = css
+
+    @font-face {
+        font-family: 'fonta57e7da6f85ce7f987abb69db9f1d13b';
+            src:url('https://nomail.com.ua/files/eot/a57e7da6f85ce7f987abb69db9f1d13b.eot?#iefix') format('embedded-opentype'),
+                url('https://nomail.com.ua/files/woff/a57e7da6f85ce7f987abb69db9f1d13b.woff') format('woff'),
+                url('https://nomail.com.ua/files/woff2/a57e7da6f85ce7f987abb69db9f1d13b.woff2') format('woff2');
+    }
+
+    @font-face { font-family: 'SFUIDisplay-Ultralight';  src: local('SFUIDisplay-Ultralight'), url('https://nomail.com.ua/files/woff/a57e7da6f85ce7f987abb69db9f1d13b.woff') format('woff'); }
+    
     * {
         padding: 0;
         margin: 0;
@@ -8,8 +18,9 @@
     }
 
     body {
-        font: 13px/18px 'Trebuchet MS', Helvetica, sans-serif;
-        color: #4a4a4a;
+        font: 13px/18px;
+        font-family: 'SFUIDisplay-Ultralight';
+        color: #282f36;
         margin: 0;
         padding:0;
         background: #fff;
@@ -58,6 +69,7 @@
         color: #1991eb; 
         text-decoration: none; 
         font-size: 13px;
+        font-family: 'SFUIDisplay-Regular';
     }
 
     .center-table--block{
@@ -80,7 +92,8 @@
         display: inline-block; 
         line-height: 30px; 
         border-bottom: 1px solid #1991eb; 
-        padding: 0 10px;"
+        padding: 0 10px;
+        font-family: 'SFUIDisplay-Semibold';
     }
 
     .user-info--name--span{
@@ -90,12 +103,14 @@
         line-height: normal;
         text-align: left;
         color: #1991eb;
+        font-family: 'SFUIDisplay-Bold';
     }
 
     .user-info--date--span{
         font-size: 12px;
         line-height: 1.75;
         color: #7f8fa4;
+        font-family: 'SFUIDisplay-Regular';
     }
 
     .statistic-column{
@@ -112,6 +127,7 @@
         font-size: 14px;
         text-align: left;
         color: #282f36;
+        font-family: 'SFUIDisplay-Regular';
     }
 
     .statistic-column--percent{
@@ -121,26 +137,44 @@
         padding: 5px 0;
     }
 
+    .statistic-column--comment{
+        color: #7f8fa4;
+        font-family: 'SFUIDisplay-Regular';
+    }
+    
     .statistic-column--highlight{
         color: #1991eb;
     }
 
     .statistic-column--lower{
         font-size: 34px;
+        font-family: 'SFUIDisplay-Light';
     }
 
     .statistic-column--list--items{
         list-style-type: none;
         margin-top: 5px;
+        font-family: 'SFUIDisplay-Regular';
+        font-size: 12px;
+    }
+
+    .statistic-column--list--wrap-block{
+        max-width: 125px;
+        word-break: break-all;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
     .statistic-column--list--items--boxes{
         width: 10px;
         height: 10px;
         display: inline-block;
-        margin-right: 5px;
+        margin-right: 10px;
         border-radius: 50%;
         background-color: #1991eb;
+        position: relative;
+        top: 1.5px;
     }
 
     .statistic-column--list--items:nth-child(2) .statistic-column--list--items--boxes{
@@ -162,11 +196,19 @@
     .row-teammates td{
         padding: 10px 0 ;
         border-bottom: solid 1px #dfe3e9;
+        font-family: 'SFUIDisplay-Regular';
+    }
+
+    .row-teammates--name-block{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 350px;
     }
 
     .project-name{
         font-size: 14px;
-        font-weight: 500;
+        font-weight: bold;
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
@@ -191,7 +233,7 @@
 
     .timer-value{
         font-size: 15px;
-        font-weight: 500;
+        font-weight: bold;
         color: #282f36;
     }
 
@@ -201,8 +243,11 @@
     }
 
     .teammate-name{
-        position: relative;
-        bottom: 8px;
+        display: inline-block;
+        text-overflow: ellipsis;
+        max-width: 300px;
+        overflow: hidden;
+        margin-bottom: 1px;
     }
 
     .bottom-btn-block{
@@ -219,6 +264,7 @@
         color: #ffffff;
         text-decoration: none; 
         font-size: 13px;
+        font-family: 'SFUIDisplay-Regular';
     }
 
     .bottom-text-block{
@@ -231,6 +277,7 @@
         font-style: normal;
         font-stretch: normal;
         line-height: 1.45;
+        font-family: 'SFUIDisplay-Regular';
     }
 
     .bottom-text-block a {

@@ -2,7 +2,7 @@
 html lang=en
   head
     meta charset=utf-8
-    title Your Weekly Statistics
+    title {{.Title}}
 
     = include public/styles/all
     = include public/styles/trackers
