@@ -8,7 +8,7 @@ import (
 
 	"github.com/yosssi/ace"
 
-	"golang/GoTemplates/datatypes"
+	datatypes "app/datatypes"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
